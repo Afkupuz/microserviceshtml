@@ -1,8 +1,37 @@
+function api_call(successCallback, local) {
+    var root = local;
+    $.ajax({
+        method: 'GET',
+        url: root + '/posts/1',
+        success: function(data, status, xhr) {
+            successCallback(data);
+        }
+    }).fail(function(xhr, status) {
+        if (status == "error") {
+            return "Sorry but there was an error: " + xhr.status + " " + xhr.statusText;
+        }
+    });
+}
+
+function load_api(name) {
+    $(name +' li:last').remove();
+    var local = 'https://jsonplaceholder.typicode.com'
+    api_call(function(content){
+        $(name).append(
+          $('<li>').append(content['body'])); 
+        }, local);
+}
+
 
 function main() {
 
 (function () {
    'use strict';
+
+
+    $(document).ready(function() {
+      load_api('#renis')
+    });
 
    /* ==============================================
   	Testimonial Slider
