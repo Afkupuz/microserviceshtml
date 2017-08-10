@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Invictus</title>
+<title>ATT Micro-Service</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -56,7 +56,7 @@
 <!-- Header -->
 <header class="text-center" name="home">
   <div class="intro-text">
-    <h1 class="wow zoomIn">Really cool presentation of</h1>
+    <h1 class="wow zoomIn" >Really cool presentation of</h1>
     <h1 class="wow fadeInDown" data-wow-delay="600ms">our Docker container information</h1>
     <div class="clearfix"></div>
     <div class="clearfix"></div>
@@ -72,63 +72,54 @@
       <div class="clearfix"></div>
     </div>
     <div class="row wow fadeInDown" data-wow-delay="200ms">
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#renis')" class="fa fa-rocket"></i>
         <h4>Renis's Docker Container</h4>
-        <ul>
-          <li> Object 1: </li>
-          <li> Object 2: </li>
+        <ul id='renis'>
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-gears"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont1')" class="fa fa-gears"></i>
         <h4>Container 1</h4>
-        <ul>
+        <ul id='cont1'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-pie-chart"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont2')" class="fa fa-pie-chart"></i>
         <h4>Container 2</h4>
-        <ul>
+        <ul id='cont2'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-line-chart"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont3')" class="fa fa-line-chart"></i>
         <h4>Container 3</h4>
-        <ul>
+        <ul id='cont3'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
     </div>
     <div class="space"></div>
     <div class="row wow fadeInDown" data-wow-delay="400ms">
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-shopping-cart"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont4')" class="fa fa-shopping-cart"></i>
         <h4>Container 4</h4>
-        <ul>
+        <ul id='cont4'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-file-text-o"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont5')" class="fa fa-file-text-o"></i>
         <h4>Container 5</h4>
-        <ul>
+        <ul id='cont5'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont6')" class="fa fa-desktop"></i>
         <h4>Container 6</h4>
-        <ul>
+        <ul id='cont6'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-camera"></i>
+      <div class="col-md-3 col-sm-6 service"> <i onclick="load_api('#cont7')" class="fa fa-camera"></i>
         <h4>Container 7</h4>
-        <ul>
+        <ul id='cont7'>
           <li> Object 1: </li>
-          <li> Object 2: </li>
         </ul>
       </div>
     </div>
@@ -184,7 +175,7 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/04.jpg" alt="..." class="team-img">
+        <div class="thumbnail"> <img height=100px width=80px src="img/team/04.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Jaewoo Park</h3>
             <p>Cool Guy</p>
