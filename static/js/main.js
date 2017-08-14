@@ -2,7 +2,7 @@ function api_call(successCallback, local) {
     var root = local;
     $.ajax({
         method: 'GET',
-        url: root + '/posts/1',
+        url: root + '/test',
         success: function(data, status, xhr) {
             successCallback(data);
         }
@@ -15,10 +15,11 @@ function api_call(successCallback, local) {
 
 function load_api(name) {
     $(name +' li:last').remove();
-    var local = 'https://jsonplaceholder.typicode.com'
+    var local = 'http://localhost:5000'
     api_call(function(content){
+      console.log(content)
         $(name).append(
-          $('<li>').append(content['body'])); 
+          $('<li>').append(content)); 
         }, local);
 }
 
