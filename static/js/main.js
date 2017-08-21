@@ -2,7 +2,7 @@ function api_call(successCallback, local) {
     var root = local;
     $.ajax({
         method: 'GET',
-        url: root + '/test',
+        url: root,
         success: function(data, status, xhr) {
             successCallback(data);
         }
@@ -13,9 +13,9 @@ function api_call(successCallback, local) {
     });
 }
 
-function load_api(name) {
+function load_api(name, address) {
     $(name +' li:last').remove();
-    var local = 'http://localhost:5000'
+    var local = address
     api_call(function(content){
       console.log(content)
         $(name).append(
