@@ -1,8 +1,7 @@
 function api_call(successCallback, local) {
-    var root = local;
     $.ajax({
         method: 'GET',
-        url: root,
+        url: local,
         success: function(data, status, xhr) {
             successCallback(data);
         }
@@ -15,12 +14,11 @@ function api_call(successCallback, local) {
 
 function load_api(name, address) {
     $(name +' li:last').remove();
-    var local = address
     api_call(function(content){
-      console.log(content)
+      var str = JSON.stringify(content, null, 2);
         $(name).append(
-          $('<li>').append(content)); 
-        }, local);
+          $('<li>').append(str)); 
+        }, address);
 }
 
 
@@ -31,7 +29,7 @@ function main() {
 
 
     $(document).ready(function() {
-      load_api('#renis')
+      load_api('#renis', 'http://localhost:5000')
     });
 
    /* ==============================================
